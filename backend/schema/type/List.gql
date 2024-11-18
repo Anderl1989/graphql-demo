@@ -1,0 +1,11 @@
+# import * from './ToDo.gql'
+
+input ListInput {
+  name: String!
+}
+
+type List {
+  _id: ID!
+  name: String!
+  toDos: [ToDo]
+}

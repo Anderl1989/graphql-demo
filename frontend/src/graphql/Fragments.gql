@@ -1,0 +1,10 @@
+fragment List on List {
+  _id
+  name
+}
+
+fragment ToDo on ToDo {
+  _id
+  message
+  list_id
+}

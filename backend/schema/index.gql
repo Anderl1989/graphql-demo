@@ -1,0 +1,20 @@
+# import * from './type/ToDo.gql'
+# import * from './type/List.gql'
+
+type Query {
+  lists: [List]
+  list(id: ID!): List
+
+  toDos(list_id: ID): [ToDo]
+  toDo(id: ID!): ToDo
+}
+
+type Mutation {
+  createList(input: ListInput!): List
+  updateList(id: ID!, input: ListInput!): List
+  deleteList(id: ID!): Boolean
+
+  createToDo(input: CreateToDoInput!): ToDo
+  updateToDo(id: ID!, input: UpdateToDoInput!): ToDo
+  deleteToDo(id: ID!): Boolean
+}

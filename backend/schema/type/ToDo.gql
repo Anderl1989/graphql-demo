@@ -1,0 +1,18 @@
+# import * from './List.gql'
+
+input CreateToDoInput {
+  message: String!
+  list_id: ID!
+}
+
+input UpdateToDoInput {
+  message: String
+  list_id: ID
+}
+
+type ToDo {
+  _id: ID!
+  message: String!
+  list_id: ID!
+  list: List
+}

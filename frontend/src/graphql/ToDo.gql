@@ -1,0 +1,12 @@
+#import './Fragments.gql'
+
+mutation CREATE_TODO($input: CreateToDoInput!) {
+  createToDo(input: $input) {
+    _id
+    message
+  }
+}
+
+mutation DELETE_TODO($id: ID!) {
+  deleteToDo(id: $id)
+}

@@ -1,0 +1,27 @@
+#import './Fragments.gql'
+
+query LISTS {
+  lists {
+    ...List
+  }
+}
+
+query LIST($id: ID!) {
+  list(id: $id) {
+    ...List
+    toDos {
+      ...ToDo
+    }
+  }
+}
+
+mutation CREATE_LIST($input: ListInput!) {
+  createList(input: $input) {
+    _id
+    name
+  }
+}
+
+mutation DELETE_LIST($id: ID!) {
+  deleteList(id: $id)
+}
